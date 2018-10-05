@@ -1,15 +1,13 @@
 const hexValues = "0123456789ABCDEF"
 
 proc hexify*(n: int): string =
-  var n, d = n
-
   if n == 0:
-    result = "0"
+    return "0"
 
+  var n = n
   while n > 0:
-    d = n mod 16
+    result = $hexValues[n mod 16] & result
     n = n shr 4
-    result = $hexValues[d] & result
 
 proc unhexify(hex: string): int =
   discard
