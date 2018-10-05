@@ -8,7 +8,7 @@ proc hexify*(n: int): string =
 
   while n > 0:
     d = n mod 16
-    n = n div 16
+    n = n shr 4
     result = $hexValues[d] & result
 
 proc unhexify(hex: string): int =
