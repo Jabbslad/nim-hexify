@@ -11,5 +11,5 @@ proc hexify*(n: int): string =
     n = n div 16
     result = $hexValues[d] & result
 
-  result = "0x" & result 
-
+proc unhexify(hex: string): int =
+  discard
