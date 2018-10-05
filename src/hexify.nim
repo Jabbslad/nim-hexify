@@ -6,7 +6,7 @@ proc hexify*(n: int): string =
 
   var n = n
   while n > 0:
-    result = $hexValues[n mod 16] & result
+    result = $hexValues[n and 0xF] & result
     n = n shr 4
 
 proc unhexify(hex: string): int =
