@@ -10,3 +10,6 @@ test "201 as hex should be C9":
 
 test "39554 as hex should be 9A82":
   check "9A82" == hexify(39554)
+
+  test "C9 as hex should be 201":
+    check unhexify("C9") == 201
